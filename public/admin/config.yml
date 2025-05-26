@@ -1,9 +1,6 @@
 backend:
-  name: github
-  repo: JNC-CF-A/jnc-template
-  base_url: https://jnc-template.pages.dev/
+  name: git-gateway
   branch: master
-  auth_endpoint: /api/auth
 
 media_folder: public/images
 public_folder: /images
