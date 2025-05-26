@@ -30,10 +30,10 @@ export default function Index({ recentPosts }: Props) {
       <div className="container">
         <div>
           <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
+            Hi, We're Jemma's Nutritional Coaching<span className="fancy">.</span>
           </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
+          <span className="handle">@jemmasnutritionalcoaching</span>
+          <h2>Coaching for a healthy life.</h2>
 
           <nav className="nav">
             <Link href="/">Home</Link> | <Link href="/posts">Blog</Link>
