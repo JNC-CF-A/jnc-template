@@ -24,19 +24,19 @@ export default function JsonLdMeta({
 }: Props) {
   return (
     <Head>
-      <script
-        {...jsonLdScriptProps<BlogPosting>({
-          "@context": "https://schema.org",
-          "@type": "BlogPosting",
-          mainEntityOfPage: config.base_url + url,
-          headline: title,
-          keywords: keywords ? undefined : keywords.join(","),
-          datePublished: formatISO(date),
-          author: author,
-          image: image,
-          description: description,
-        })}
-      />
+   <script
+  {...jsonLdScriptProps<BlogPosting>({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    mainEntityOfPage: config.base_url + url,
+    headline: title,
+    keywords: keywords?.join(","),
+    datePublished: formatISO(date),
+    author: author,
+    image: image,
+    description: description,
+  })}
+/>
     </Head>
   );
 }
