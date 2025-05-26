@@ -1,19 +1,22 @@
-module.exports = ({
-  pageExtensions: ["tsx"],
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: 'export',
+  pageExtensions: ['tsx'],
+  reactStrictMode: true,
+  webpack: (config) => {
     config.module.rules.push(
-      ...[
-        {
-          test: /\.yml$/,
-          type: "json",
-          use: "yaml-loader",
-        },
-        {
-          test: /\.svg$/,
-          use: "@svgr/webpack",
-        },
-      ]
+      {
+        test: /\.yml$/,
+        type: 'json',
+        use: 'yaml-loader',
+      },
+      {
+        test: /\.svg$/,
+        use: '@svgr/webpack',
+      }
     );
     return config;
   },
-});
+};
+
+module.exports = nextConfig;
