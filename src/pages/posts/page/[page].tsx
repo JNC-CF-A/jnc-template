@@ -31,24 +31,24 @@ export default function Page({ posts, tags, pagination, page }: Props) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
-  if (!params?.page) throw new Error("Page parameter is missing");
-  const page = parseInt(params.page as string);
+export const getStaticProps: GetStaticProps = async (context) => {
+  const page = parseInt((context.params?.page || "1") as string);
   const posts = listPostContent(page, config.posts_per_page);
   const tags = listTags();
   const pagination = {
     current: page,
-    pages: Math.ceil(countPosts() / config.posts_per_page),
+    pages: Math.ceil(posts.length / config.posts_per_page),
   };
+
   return {
     props: {
-      page,
       posts,
       tags,
       pagination,
     },
   };
 };
+
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const pages = Math.ceil(countPosts() / config.posts_per_page);
