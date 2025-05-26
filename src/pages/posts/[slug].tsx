@@ -36,12 +36,6 @@ const components = {
   Twitter,
 };
 
-const slugToPostContent = (() => {
-  const hash: Record<string, any> = {};
-  fetchPostContent().forEach((it) => (hash[it.slug] = it));
-  return hash;
-})();
-
 type Props = {
   title: string;
   dateString: string;
@@ -81,17 +75,22 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const slug = params?.post as string;
-  const source = fs.readFileSync(slugToPostContent[slug].fullPath, "utf8");
+  const slug = params?.slug as string;
+  const allPosts = fetchPostContent();
+  const post = allPosts.find((p) => p.slug === slug);
+
+  if (!post) {
+    return { notFound: true };
+  }
+
+  const source = fs.readFileSync(post.fullPath, "utf8");
   const { content, data } = matter(source, {
     engines: {
       yaml: (s) => yaml.load(s, { schema: yaml.JSON_SCHEMA }) as object,
     },
   });
 
-  const mdxSource = await serialize(content, {
-    scope: data,
-  });
+  const mdxSource = await serialize(content, { scope: data });
 
   return {
     props: {
