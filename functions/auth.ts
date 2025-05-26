@@ -1,5 +1,5 @@
 // functions/auth.ts
-export async function onRequestGet({ request }) {
+export async function onRequestGet({ request }: { request: Request }): Promise<Response> {
   const url = new URL(request.url);
   const code = url.searchParams.get("code");
 
