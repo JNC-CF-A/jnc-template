@@ -1,19 +1,12 @@
 {
-  "base_url": "https://wutali-nextjs-netlify-blog.netlify.app",
-  "site_title": "Next.js Netlify Blog",
-  "site_description": "Next.js blog template for Netlify",
+  "base_url": "https://jncwebsite.netlify.app/",
+  "site_title": "Jemma's Nutritional Coaching",
+  "site_description": "Website for Jemma's Nutritional Coaching",
   "site_keywords": [
-    {
-      "keyword": "Next.js"
-    },
-    {
-      "keyword": "Netlify"
-    },
-    {
-      "keyword": "React"
-    }
+    "Nutrition",
+    "Coaching"
   ],
   "posts_per_page": 5,
   "twitter_account": "@my-account",
-  "github_account": "wutali"
+  "github_account": "@notset"
 }
