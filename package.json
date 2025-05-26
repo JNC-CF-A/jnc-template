@@ -10,12 +10,19 @@
   },
   "dependencies": {
     "date-fns": "^4.1.0",
+    "gray-matter": "^4.0.3",
+    "js-yaml": "^4.1.0",
     "next": "15.2.4",
+    "next-mdx-remote": "^5.0.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-schemaorg": "^2.0.0",
+    "react-youtube": "^10.1.0",
+    "schema-dts": "^1.1.5"
   },
   "devDependencies": {
     "@types/date-fns": "^2.6.3",
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.15.21",
     "@types/react": "^19.1.5",
     "typescript": "^5.8.3"
