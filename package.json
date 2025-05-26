@@ -20,6 +20,7 @@
     "schema-dts": "^1.1.5"
   },
   "devDependencies": {
+    "@svgr/webpack": "^8.1.0",
     "@types/date-fns": "^2.6.3",
     "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.15.21",
