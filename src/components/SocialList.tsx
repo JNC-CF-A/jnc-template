@@ -10,7 +10,7 @@ export function SocialList({}) {
     <div>
       <a
         title="Facebook"
-        href={`https://facebook.com/$(config.facebook_account}`}
+        href={`https://facebook.com/${config.facebook_account}`}
         className="hover:text-accent-terra transition-colors"
         target="_blank"
         rel="noopener noreferrer"
