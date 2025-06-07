@@ -39,7 +39,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     config.posts_per_page,
     slug
   );
-  const tags = listTags();
+  const tag = getTag(slug);
   const pagination = {
     current: page ? parseInt(page as string) : 1,
     pages: Math.ceil(posts.length / config.posts_per_page),
@@ -48,9 +48,9 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return {
     props: {
       posts,
-      tags,
+      tag,
       pagination,
-      currentTag: slug || null,
+      page: page || null,
     },
   };
 };

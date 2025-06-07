@@ -34,6 +34,8 @@ const components = {
   YouTube,
   Instagram,
   Twitter,
+  InstagramEmbed: Instagram,
+  TwitterTweetEmbed: Twitter,
 };
 
 type Props = {
@@ -98,7 +100,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       dateString: data.date,
       slug: data.slug,
       description: "",
-      tags: data.tags,
+      tags: data.tags ?? [],
       author: data.author,
       source: mdxSource,
     },
