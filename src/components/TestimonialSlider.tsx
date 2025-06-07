@@ -23,4 +23,5 @@ export default function TestimonialSlider() {
       </blockquote>
     </div>
   )
+  
 }
