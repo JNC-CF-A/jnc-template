@@ -3,8 +3,25 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import Link from "next/link";
+import { GetStaticProps } from "next";
+import { fetchPostContent, PostContent } from "../lib/posts";
 
-export default function Index() {
+type Props = {
+  recentPosts: Pick<PostContent, "title" | "slug">[];
+};
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const allPosts = fetchPostContent();
+  const recentPosts = allPosts.slice(0, 3).map(({ title, slug }) => ({ title, slug }));
+  return {
+    props: {
+      recentPosts,
+    },
+  };
+};
+
+export default function Index({ recentPosts }: Props) {
   return (
     <Layout>
       <BasicMeta url={"/"} />
@@ -13,13 +30,30 @@ export default function Index() {
       <div className="container">
         <div>
           <h1>
-            Hi, We're Next.js & Netlify<span className="fancy">.</span>
+            Hi, We're Jemma's Nutritional Coaching<span className="fancy">.</span>
           </h1>
-          <span className="handle">@nextjs-netlify-blog</span>
-          <h2>A blog template with Next.js and Netlify.</h2>
+          <span className="handle">@jemmasnutritionalcoaching</span>
+          <h2>Coaching for a healthy life.</h2>
+
+          <nav className="nav">
+            <Link href="/">Home</Link> | <Link href="/posts">Blog</Link>
+          </nav>
+
+          <section className="recent">
+            <h3>Recent Posts</h3>
+            <ul>
+              {recentPosts.map((post) => (
+                <li key={post.slug}>
+                  <Link href={`/posts/${post.slug}`}>{post.title}</Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
           <SocialList />
         </div>
       </div>
+
       <style jsx>{`
         .container {
           display: flex;
@@ -47,7 +81,16 @@ export default function Index() {
           color: #9b9b9b;
           letter-spacing: 0.05em;
         }
-
+        .nav {
+          margin: 1rem 0;
+        }
+        .recent h3 {
+          margin-top: 1rem;
+        }
+        .recent ul {
+          list-style: disc;
+          padding-left: 1.5rem;
+        }
         @media (min-width: 769px) {
           h1 {
             font-size: 3rem;
