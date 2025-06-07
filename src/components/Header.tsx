@@ -11,7 +11,7 @@ export default function Header() {
           <li><Link href="/">Home</Link></li>
           <li><Link href="/services">Services</Link></li>
           <li><Link href="/about">About</Link></li>
-          <li><Link href="/blog">Blog</Link></li>
+          <li><Link href="/posts">Blog</Link></li>
           <li><Link href="/onboarding">Client Onboarding</Link></li>
           <li><Link href="/contact">Contact</Link></li>
           <li className="cta"><Link href="/contact">Book a Call</Link></li>
