@@ -17,6 +17,7 @@ export default function Layout({ children }: Props) {
       </Head>
       <Header />
       <main>{children}</main>
+      <Footer />
       <style jsx>
         {`
           .root {
