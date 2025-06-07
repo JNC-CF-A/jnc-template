@@ -16,10 +16,10 @@ export default function TestimonialSlider() {
   const testimonial = testimonials[currentIndex]
 
   return (
-    <div className="max-w-2xl mx-auto text-center">
+    <div className="max-w-2xl mx-auto text-center bg-secondary p-6 rounded-lg">
       <blockquote className="transition-opacity duration-300">
-        <p className="text-lg font-medium text-primary-foreground mb-4">"{testimonial.text}"</p>
-        <cite className="text-accent-terra font-semibold">- {testimonial.name}</cite>
+        <p className="text-lg font-medium text-secondary-foreground mb-4">"{testimonial.text}"</p>
+        <cite className="text-accent-orange font-semibold">- {testimonial.name}</cite>
       </blockquote>
     </div>
   )
