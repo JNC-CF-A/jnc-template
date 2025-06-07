@@ -1,14 +1,14 @@
 :root {
-  --color-primary: #15847d;
-  --color-primary-foreground: #222;
-  --color-secondary: #f7f7f7;
-  --color-secondary-foreground: #333;
-  --accent-terra: #15847d;
-  --accent-olive: #6b8e23;
-  --accent-sage: #9caf88;
+  --color-primary: #2c3e50;
+  --color-primary-foreground: #ffffff;
+  --color-secondary: #34495e;
+  --color-secondary-foreground: #ecf0f1;
+  --accent-terra: #ff6500;
+  --accent-olive: #27ae60;
+  --accent-sage: #57828d;
   --accent-lime: #84cc16;
   --accent-raspberry: #e11d48;
-  --accent-orange: #f97316;
+  --accent-orange: #d35305;
 }
 
 .bg-primary {
@@ -29,6 +29,10 @@
 
 .text-accent-terra {
   color: var(--accent-terra);
+}
+
+.text-accent-orange {
+  color: var(--accent-orange);
 }
 
 .bg-accent-terra {

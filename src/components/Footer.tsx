@@ -11,8 +11,8 @@ export default function Footer() {
       </div>
       <style jsx>{`
         .footer {
-          background: #fff;
-          border-top: 1px solid #eee;
+          background: #2c3e50;
+          color: #ecf0f1;
         }
         .container {
           max-width: 960px;
