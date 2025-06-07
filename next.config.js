@@ -3,6 +3,9 @@ const nextConfig = {
   output: 'export',
   pageExtensions: ['tsx'],
   reactStrictMode: true,
+  images: {
+    unoptimized: true,
+  },
   webpack: (config) => {
     config.module.rules.push(
       {
