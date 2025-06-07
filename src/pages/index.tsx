@@ -3,6 +3,7 @@ import BasicMeta from "../components/meta/BasicMeta";
 import OpenGraphMeta from "../components/meta/OpenGraphMeta";
 import TwitterCardMeta from "../components/meta/TwitterCardMeta";
 import { SocialList } from "../components/SocialList";
+import TestimonialSlider from "../components/TestimonialSlider";
 import Link from "next/link";
 import { GetStaticProps } from "next";
 import { fetchPostContent, PostContent } from "../lib/posts";
@@ -45,6 +46,8 @@ export default function Index({ recentPosts }: Props) {
               ))}
             </ul>
           </section>
+
+          <TestimonialSlider />
 
           {/*<SocialList /> - Commented to prevent displaying in main page*/}
         </div>

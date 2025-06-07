@@ -1,0 +1,11 @@
+
+testimonials:
+  - id: 1
+    name: Jane Doe
+    text: "Jemma's Nutritional Coaching transformed my relationship with food. I've never felt healthier!"
+  - id: 2
+    name: John Smith
+    text: "The personalized meal plans were a game-changer for my fitness goals."
+  - id: 3
+    name: Emily Brown
+    text: "The group workshops were both informative and fun. Highly recommended!"
