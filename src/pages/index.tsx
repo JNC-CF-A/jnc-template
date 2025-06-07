@@ -35,10 +35,6 @@ export default function Index({ recentPosts }: Props) {
           <span className="handle">@jemmasnutritionalcoaching</span>
           <h2>Coaching for a healthy life.</h2>
 
-          <nav className="nav">
-            <Link href="/">Home</Link> | <Link href="/posts">Blog</Link>
-          </nav>
-
           <section className="recent">
             <h3>Recent Posts</h3>
             <ul>
@@ -50,7 +46,7 @@ export default function Index({ recentPosts }: Props) {
             </ul>
           </section>
 
-          <SocialList />
+          {/*<SocialList /> - Commented to prevent displaying in main page*/}
         </div>
       </div>
 
