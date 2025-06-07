@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { testimonials } from '../lib/testimonials'
 
 export default function TestimonialSlider() {
