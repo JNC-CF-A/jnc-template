@@ -5,8 +5,9 @@ import Breadcrumb from "./Breadcrumb";
 
 type Props = {
   children: React.ReactNode;
+  showBreadcrumb?: boolean;
 };
-export default function Layout({ children }: Props) {
+export default function Layout({ children, showBreadcrumb = true }: Props) {
   return (
     <div className="root">
       <Head>
@@ -17,7 +18,7 @@ export default function Layout({ children }: Props) {
         <meta name="theme-color" content="#fff" />
       </Head>
       <Header />
-      <Breadcrumb />
+      {showBreadcrumb && <Breadcrumb />}
       <main>{children}</main>
       <Footer />
       <style jsx>
@@ -31,6 +32,7 @@ export default function Layout({ children }: Props) {
           main {
             flex: 1 0 auto;
             display: flex;
+            flex-direction: column;
           }
         `}
       </style>

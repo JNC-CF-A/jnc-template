@@ -1,15 +1,28 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const router = useRouter()
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+    service: '',
+  })
+
+  useEffect(() => {
+    if (typeof router.query.service === 'string') {
+      setFormData(prev => ({ ...prev, service: router.query.service as string }))
+    }
+  }, [router.query.service])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
     console.log('Form submitted:', formData)
     alert('Thank you for your message! We will get back to you soon.')
-    setFormData({ name: '', email: '', message: '' })
+    setFormData({ name: '', email: '', message: '', service: formData.service })
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -21,6 +34,7 @@ export default function ContactForm() {
     <section className="my-12">
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
       <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <input type="hidden" name="service" value={formData.service} />
         <div className="mb-4">
           <label htmlFor="name" className="block text-foreground font-bold mb-2">Name</label>
           <input
