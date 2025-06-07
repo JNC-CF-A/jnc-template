@@ -49,12 +49,13 @@ export default function Index() {
           justify-content: center;
           text-align: center;
         }
-        .overlay h1White {
+        .overlay {
+          color: #ffffff;
+        }
+        .overlay h1 {
           font-size: 2.5rem;
           font-weight: 500;
           margin: 2.5rem 0 0 0;
-          color: #ffffff;
-        }
         }
         .overlay h2 {
           font-size: 1.75rem;
@@ -68,7 +69,7 @@ export default function Index() {
         .handle {
           display: block;
           margin-top: 0.275em;
-          color: #9b9b9b;
+          color: #ffffff;
           letter-spacing: 0.05em;
         }
         .explore {
