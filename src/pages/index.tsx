@@ -11,7 +11,7 @@ import Link from "next/link";
 
 export default function Index() {
   return (
-    <Layout>
+    <Layout showBreadcrumb={false}>
       <BasicMeta url={"/"} />
       <OpenGraphMeta url={"/"} />
       <TwitterCardMeta url={"/"} />
