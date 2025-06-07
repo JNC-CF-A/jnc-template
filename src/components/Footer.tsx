@@ -1,36 +1,28 @@
-import Link from "next/link";
-import { SocialList } from "./SocialList";
+import Link from 'next/link'
+import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react'
 
 export default function Footer() {
-  const year = new Date().getFullYear();
   return (
-    <footer className="footer">
-      <div className="container">
-        <p>&copy; {year} Jemma's Nutritional Coaching. All rights reserved.</p>
-        <SocialList />
+    <footer className="bg-primary text-primary-foreground p-8">
+      <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <div className="mb-4 md:mb-0">
+          <p>&copy; {new Date().getFullYear()} Jemma's Nutritional Coaching. All rights reserved.</p>
+        </div>
+        <div className="flex space-x-4">
+          <Link href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-terra transition-colors">
+            <Facebook />
+          </Link>
+          <Link href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-terra transition-colors">
+            <Instagram />
+          </Link>
+          <Link href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-terra transition-colors">
+            <Linkedin />
+          </Link>
+          <Link href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-accent-terra transition-colors">
+            <Twitter />
+          </Link>
+        </div>
       </div>
-      <style jsx>{`
-        .footer {
-          background: #fff;
-          border-top: 1px solid #eee;
-        }
-        .container {
-          max-width: 960px;
-          margin: 0 auto;
-          padding: 2rem 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          text-align: center;
-        }
-        @media (min-width: 769px) {
-          .container {
-            flex-direction: row;
-            justify-content: space-between;
-            text-align: left;
-          }
-        }
-      `}</style>
     </footer>
-  );
+  )
 }
