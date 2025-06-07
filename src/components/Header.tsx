@@ -14,7 +14,7 @@ export default function Header() {
           <li><Link href="/services">Services</Link></li>
           <li><Link href="/about">About</Link></li>
           <li><Link href="/posts">Blog</Link></li>
-          <li><Link href="/onboarding">Client Onboarding</Link></li>
+          <li className="hidden"><Link href="/onboarding">Client Onboarding</Link></li>
           <li><Link href="/contact">Contact</Link></li>
           <li className="cta"><Link href="/contact" className="bg-accent-terra text-white font-bold py-2 px-4 rounded-full hover:bg-accent-olive transition-colors flex items-center">
               <PhoneCall className="w-4 h-4 mr-2" />
@@ -58,6 +58,9 @@ export default function Header() {
           padding: 0.5rem 1rem;
           border-radius: 9999px;
         }
+        .hidden {
+          display: none;
+          }
       `}</style>
     </header>
   );
