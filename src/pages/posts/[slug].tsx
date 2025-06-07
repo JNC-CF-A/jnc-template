@@ -34,6 +34,8 @@ const components = {
   YouTube,
   Instagram,
   Twitter,
+  InstagramEmbed: Instagram,
+  TwitterTweetEmbed: Twitter,
 };
 
 type Props = {
