@@ -13,7 +13,7 @@ export default function TestimonialSlider() {
     return () => clearInterval(timer)
   }, [])
 
-   const testimonial = testimonials[currentIndex]
+  const testimonial = testimonials[currentIndex]
 
   return (
     <div className="max-w-2xl mx-auto text-center">
