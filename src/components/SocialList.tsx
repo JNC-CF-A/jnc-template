@@ -19,7 +19,7 @@ export function SocialList({}) {
       </a>
       <a
         title="Instagram"
-        href={}
+        href={`https://instagram.com/${config.instagram_account}`}
         className="hover:text-accent-terra transition-colors"
         target="_blank"
         rel="noopener noreferrer"
