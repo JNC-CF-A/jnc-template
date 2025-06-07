@@ -1,11 +1,13 @@
 import Link from "next/link";
+import { Salad, Dumbbell, Users, BookOpen, ClipboardList, PhoneCall } from 'lucide-react';
 
 export default function Header() {
   return (
     <header className="header">
       <div className="container">
-        <Link href="/" className="logo">
-          Jemma's <span className="accent">Nutritional</span> Coaching
+        <Link href="/" className="text-2xl font-bold flex items-center gap-2">
+          <Salad className="w-8 h-8" />
+          <span>Jemma's <span className="text-accent-terra">Nutritional</span> Coaching</span>
         </Link>
         <ul className="menu">
           <li><Link href="/">Home</Link></li>
