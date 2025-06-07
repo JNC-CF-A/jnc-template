@@ -12,7 +12,7 @@ export default function Navigation() {
       <div className={"container " + (active ? "active" : "")}>
         <ul>
           <li>
-            <Link href="/" className={router.pathname === "/" ? "active" : undefined}>about</Link>
+            <Link href="/about" className={router.pathname === "/about" ? "active" : undefined}>about</Link>
           </li>
           <li>
             <Link href="/posts" className={router.pathname.startsWith("/posts") ? "active" : undefined}>blog</Link>
