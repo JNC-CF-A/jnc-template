@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+import Breadcrumb from "./Breadcrumb";
 
 type Props = {
   children: React.ReactNode;
@@ -16,6 +17,7 @@ export default function Layout({ children }: Props) {
         <meta name="theme-color" content="#fff" />
       </Head>
       <Header />
+      <Breadcrumb />
       <main>{children}</main>
       <Footer />
       <style jsx>
