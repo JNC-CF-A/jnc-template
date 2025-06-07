@@ -3,7 +3,7 @@ import React from "react";
 import GitHub from "../assets/github-alt.svg";
 import Facebook from "../assets/Facebook-alt.svg";*/}
 import config from "../lib/config";
-import { Facebook, Instagram, Linkedin, Twitter, GitHub } from 'lucide-react'
+import { Facebook, Instagram, Linkedin, Twitter, Github } from 'lucide-react'
 
 export function SocialList({}) {
   return (
@@ -52,7 +52,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <GitHub width={24} height={24} fill={"#222"} />
+        <Github width={24} height={24} fill={"#222"} />
       </a>
       <style jsx>{`
         a {
