@@ -23,7 +23,7 @@ export default function Index() {
           </h1>
           <span className="handle">@jemmasnutritionalcoaching</span>
           <h2>Coaching for a healthy life.</h2>
-          <Link href="/services" className="explore">
+          <Link href="/services" className="explore bg-accent-terra text-white font-bold py-3 px-6 rounded-full hover:bg-accent-olive transition-colors text-lg">
             Explore Our Services
           </Link>
         </div>
