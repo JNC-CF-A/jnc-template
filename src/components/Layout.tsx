@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
-import Breadcrumb from "./Breadcrumb"
+import Breadcrumb from "./Breadcrumb";
 
 type Props = {
   children: React.ReactNode;
