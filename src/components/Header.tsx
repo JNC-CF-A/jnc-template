@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Salad, Dumbbell, Users, BookOpen, ClipboardList, PhoneCall } from 'lucide-react';
+import { NodeNextRequest } from "next/dist/server/base-http/node";
 
 export default function Header() {
   return (
@@ -9,7 +10,7 @@ export default function Header() {
           <Salad className="w-8 h-8" />
           <span>Jemma's <span className="text-accent-terra">Nutritional</span> Coaching</span>
         </Link>
-        <ul className="flex space-x-4 items-center">
+        <ul className="flex space-x-4 items-center no-bullet-list">
           <li><Link href="/" className="hover:text-accent-sage transition-colors">Home</Link></li>
           <li><Link href="/services" className="hover:text-accent-sage transition-colors">Services</Link></li>
           <li><Link href="/about" className="hover:text-accent-sage transition-colors">About</Link></li>

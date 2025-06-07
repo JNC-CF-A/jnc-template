@@ -84,6 +84,10 @@
   margin-left: 1rem;
 }
 
+.no-bullet-list {
+  list-style-type: none;
+}
+
 .gap-2 {
   gap: 0.5rem;
 }

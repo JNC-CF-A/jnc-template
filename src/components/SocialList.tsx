@@ -14,7 +14,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Facebook width={24} height={24} fill="currentColor" />
+        <Facebook width={24} height={24} fill="#222" />
       </a>
       <a
         title="Instagram"
@@ -22,7 +22,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener noreferrer"
       >
-        <Instagram width={24} height={24} fill="currentColor" />
+        <Instagram width={24} height={24} fill="#222" />
       </a>
 
       <a
@@ -31,7 +31,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <Linkedin width={24} height={24} fill="currentColor" />
+        <Linkedin width={24} height={24} fill="#222" />
       </a>
 
 
@@ -41,7 +41,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <Twitter width={24} height={24} fill="currentColor" />
+        <Twitter width={24} height={24} fill="#222" />
       </a>
       
       <a
@@ -50,7 +50,7 @@ export function SocialList({}) {
         target="_blank"
         rel="noopener"
       >
-        <Github width={24} height={24} fill="currentColor" />
+        <Github width={24} height={24} fill="#222" />
       </a>
       <style jsx>{`
         .social-links a {
