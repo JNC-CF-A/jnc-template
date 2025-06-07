@@ -29,7 +29,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="testimonials">
+      <section className="testimonials max-w-2xl mx-auto text-center bg-secondary p-6 rounded-lg">
         <h2>What Our Clients Say</h2>
         <TestimonialSlider />
       </section>
