@@ -16,7 +16,10 @@ export default function Header() {
           <li><Link href="/posts">Blog</Link></li>
           <li><Link href="/onboarding">Client Onboarding</Link></li>
           <li><Link href="/contact">Contact</Link></li>
-          <li className="cta"><Link href="/contact">Book a Call</Link></li>
+          <li className="cta"><Link href="/contact" className="bg-accent-terra text-white font-bold py-2 px-4 rounded-full hover:bg-accent-olive transition-colors flex items-center">
+              <PhoneCall className="w-4 h-4 mr-2" />
+              Book a Call
+            </Link></li>
         </ul>
       </div>
       <style jsx>{`
