@@ -18,9 +18,9 @@ export default function Index() {
 
       <section className="hero">
         <div className="overlay">
-          <h1White>
+          <h1>
             Hi, We're Jemma's Nutritional Coaching<span className="fancy">.</span>
-          </h1White>
+          </h1>
           <span className="handle">@jemmasnutritionalcoaching</span>
           <h2>Coaching for a healthy life.</h2>
           <Link href="/services" className="explore">
