@@ -18,9 +18,9 @@ export default function Index() {
 
       <section className="hero">
         <div className="overlay">
-          <h1>
+          <h1white>
             Hi, We're Jemma's Nutritional Coaching<span className="fancy">.</span>
-          </h1>
+          </h1white>
           <span className="handle">@jemmasnutritionalcoaching</span>
           <h2>Coaching for a healthy life.</h2>
           <Link href="/services" className="explore">
@@ -49,10 +49,12 @@ export default function Index() {
           justify-content: center;
           text-align: center;
         }
-        .overlay h1 {
+        .overlay h1white {
           font-size: 2.5rem;
-          margin: 0;
           font-weight: 500;
+          margin: 2.5rem 0 0 0;
+          color: #ffffff;
+        }
         }
         .overlay h2 {
           font-size: 1.75rem;
